@@ -1,3 +1,44 @@
 .loginButton{
+    margin-top: -50px;
+    margin-right: 100px;
     float: right;
+}
+img{
+    width: 150px;
+    height: 130px;
+}
+
+.flowerTable{
+    float: center;
+    margin: 100px;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid green;
+}
+
+.MyButton{
+    
+    font-family: "monospace";
+    background-color: lightblue;
+    border: none;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+div{
+    color: rgb(0, 64, 66);
+    font-family: "monospace";
+}
+label{
+    font-family: "monospace";
+    color: rgb(0, 64, 66);
+    padding: 10px;
+}
+input{
+    border: 0px solid;
+    background-color: rgb(209, 228, 156);
+    color: rgb(0, 64, 66);
 }
