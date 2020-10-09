@@ -15,6 +15,7 @@ img{
     margin-right: auto;
     margin-left: auto;
     border: 3px solid green;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .MyButton{
@@ -26,6 +27,8 @@ img{
     display: inline-block;
     padding: 5px 10px;
     margin: 10px;
+    width: 100px;
+    border-radius: 2px 2px 2px 2px;
 }
 
 div{
@@ -35,10 +38,17 @@ div{
 label{
     font-family: "monospace";
     color: rgb(0, 64, 66);
+    text-shadow: 1px 1px rgb(186, 216, 197);
     padding: 10px;
 }
 input{
     border: 0px solid;
+    width: 200px;
+    height: 30px;
     background-color: rgb(209, 228, 156);
     color: rgb(0, 64, 66);
+}
+
+p{
+  text-shadow: 1px 1px rgb(186, 216, 197);
 }
