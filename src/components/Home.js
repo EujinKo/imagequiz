@@ -71,12 +71,18 @@ class Home extends React.Component {
                         </td>
                         <td>
                             <div>
-                                <img src={rose} alt="rose" />
-                                <p>rose</p>
+                                <img src={daisy} alt="daisy" />
+                                <p>daisy</p>
                             </div>
                         </td>
                     </tr>
                     <tr>
+                        <td>
+                            <div>
+                                <img src={rose} alt="rose" />
+                                <p>rose</p>
+                            </div>
+                        </td>
                         <td>
                             <div>
                                 <img src={sunflower} alt="sunflower" />
@@ -113,7 +119,7 @@ class Home extends React.Component {
                             value={this.state.username}
                             onChange={this.handleChange} //Normal react tag has onChange on every tag
                         ></input>
-                        <button className="MyButton"  type="submit">Login</button>
+                        <button className="MyButton" type="submit">Login</button>
                     </form>
                 </div>
             );
