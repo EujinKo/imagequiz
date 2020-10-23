@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
+import Login from './components/Login';
 import './App.css';
 
 import {
@@ -8,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 
+//To put the base path on the top, you need to put exact path
 function App() {
   return (
     // <div className="App">
@@ -15,14 +17,13 @@ function App() {
       
     // </div>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <switch>
-      <Route exact path='/'>
-        <Home />
-      </Route>
-      <Route exact path='/login'>
-        {/* <Login /> */}
-      </Route>
-    </switch>
+      <Switch>
+        <Route exact path='/' render={props => <Home {...props}/>}>
+        </Route>
+        <Route path='/login'>
+          <Login />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 }
