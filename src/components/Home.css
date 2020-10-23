@@ -10,6 +10,7 @@ img{
 
 .flowerTable{
     float: center;
+    text-align: center;
     margin: 100px;
     width: 700px;
     margin-right: auto;
@@ -30,6 +31,18 @@ img{
     width: 100px;
     border-radius: 2px 2px 2px 2px;
 }
+.quizDiv{
+    float:center;
+    padding: 50px;
+    color: rgb(0, 64, 66);
+    font-family: "monospace";
+}
+
+.quizButtons{
+    float: right;
+    padding-right: 200px;
+}
+
 
 div{
     color: rgb(0, 64, 66);
@@ -52,3 +65,4 @@ input{
 p{
   text-shadow: 1px 1px rgb(186, 216, 197);
 }
+

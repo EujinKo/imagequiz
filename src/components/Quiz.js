@@ -49,9 +49,9 @@ class Quiz extends React.Component {
         
         return (
 
-            <div>
+            <div className='quizDiv'>
                 <img src={require(quiz.imgSrc+"")} alt={quiz.answer}/>
-                <div>   
+                <div className='quizButtons'>   
                     <button className="MyButton" onClick={()=>{this.matchQuiz(quiz,quiz.choices[0])}}>
                         {quiz.choices[0]}
                     </button>
@@ -106,12 +106,14 @@ class Quiz extends React.Component {
         if(this.state.cursor_quiz == 3){
             return(
                 <div className="flowerTable">
-                    Total Score: (current score:{this.state.score}/{3})
+                    <br/><br/>
+                    <label>Total Score: (current score:{this.state.score}/{3})</label>
                     <br/>
-                    Would you like to play again?
+                    <label>Would you like to play again?</label>
                     <br/>
                     <button className="MyButton" onClick={()=>{this.componentDidMount()}}>Yes</button>
                     <button className="MyButton" onClick={()=>{this.setTrigger()}}>No</button>
+                    <br/><br/>
                 </div>
             );
         }
