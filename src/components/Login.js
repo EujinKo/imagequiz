@@ -43,6 +43,7 @@ class Login extends React.Component {
 
         return(
             <div>
+                <br></br>
                 <form onSubmit={this.onSubmit}>
                     <label>Username:</label>
                     <input
@@ -51,7 +52,7 @@ class Login extends React.Component {
                     value={this.state.username}
                     onChange={this.onInputChange} //Normal react tag has onChange on every tag
                     ></input>
-                    <button type="submit" className="btn btn-dark">Login</button>
+                    <button type="submit" className="MyButton">Login</button>
                 </form>
             </div>
         );

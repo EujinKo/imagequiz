@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
+import Quiz from './components/Quiz';
 import './App.css';
 
 import {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/login'>
           <Login />
         </Route>
+        <Route path='/quiz' render={props => <Quiz {...props}/>}/>
       </Switch>
     </BrowserRouter>
   );

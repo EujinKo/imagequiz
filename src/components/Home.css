@@ -19,14 +19,14 @@ img{
 }
 
 .MyButton{
-    
+    text-align: center;
     font-family: "monospace";
     background-color: lightblue;
     border: none;
     color: white;
     display: inline-block;
-    padding: 5px 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     width: 100px;
     border-radius: 2px 2px 2px 2px;
 }
@@ -44,7 +44,7 @@ label{
 input{
     border: 0px solid;
     width: 200px;
-    height: 30px;
+    height: 25px;
     background-color: rgb(209, 228, 156);
     color: rgb(0, 64, 66);
 }

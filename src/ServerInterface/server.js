@@ -1,6 +1,8 @@
+import entries from './entries';
+
 let getEntries = () =>{
     //Later on we will connect to a backend and fetch all the entries
-    let entries = [];
+    return entries;
 }
 
 let server = {

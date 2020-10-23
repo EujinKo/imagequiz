@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 //Link: for client side swithcing
 //Button: for server side
 
@@ -21,6 +22,15 @@ class Home extends React.Component {
             username: ''
         };
     }
+
+    getPathWithCursor=(cursor)=>{
+        let from = {pathname: '/quiz', state: {
+            username: this.state.username,
+            cursor: cursor
+        }};
+        return from;
+    }
+    
     body = () => {
         return (
             <div className="flowerTable">
@@ -29,25 +39,33 @@ class Home extends React.Component {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={cherryblossom} alt="cherryblossom" />
+                                    <Link to={this.getPathWithCursor(0)}>
+                                        <img src={cherryblossom} alt="cherryblossom"/>
+                                    </Link>
                                     <p>cherryblossom</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={daffodil} alt="daffodil" />
+                                    <Link to={this.getPathWithCursor(1)}>
+                                        <img src={daffodil} alt="daffodil"/>
+                                    </Link>
                                     <p>daffodil</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={lily} alt="lily" />
+                                    <Link to={this.getPathWithCursor(2)}>
+                                        <img src={lily} alt="lily"/>
+                                    </Link>
                                     <p>lily</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={daisy} alt="daisy" />
+                                    <Link to={this.getPathWithCursor(3)}>
+                                        <img src={daisy} alt="daisy"/>
+                                    </Link>
                                     <p>daisy</p>
                                 </div>
                             </td>
@@ -55,25 +73,33 @@ class Home extends React.Component {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={rose} alt="rose" />
+                                    <Link to={this.getPathWithCursor(4)}>
+                                        <img src={rose} alt="rose"/>
+                                    </Link>
                                     <p>rose</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={sunflower} alt="sunflower" />
+                                    <Link to={this.getPathWithCursor(5)}>
+                                        <img src={sunflower} alt="sunflower"/>
+                                    </Link>
                                     <p>sunflower</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={tulip} alt="tulip" />
+                                    <Link to={this.getPathWithCursor(6)}>
+                                        <img src={tulip} alt="tulip"/>
+                                    </Link>
                                     <p>tulip</p>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={waterlily} alt="waterlily" />
+                                    <Link to={this.getPathWithCursor(7)}>
+                                        <img src={waterlily} alt="waterlily"/>
+                                    </Link>
                                     <p>waterlily</p>
                                 </div>
                             </td>
@@ -84,6 +110,8 @@ class Home extends React.Component {
 
         );
     }
+
+
     SetUserName = (username) =>{
         this.setState({
             username: username
@@ -98,7 +126,7 @@ class Home extends React.Component {
                 //Indicates that this comes from Login page
                 if(location.state.user){
                     //Set additional condition to escape infinite loop
-                    if(location.state.user != this.state.username){
+                    if(location.state.user !== this.state.username){
                         this.SetUserName(location.state.user);
                     }
                 }
@@ -111,10 +139,10 @@ class Home extends React.Component {
                     
                     {this.state.username.length > 0 
                     ? this.state.username
-                    :<Link to='/login'>Login</Link>}
+                    :<Link className='MyButton' to='/login'>Login</Link>}
                 
                 </div>
-                {this.body()}         
+                {this.body()}        
             </div>
         );
     }
