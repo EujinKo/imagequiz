@@ -34,6 +34,7 @@ class Home extends React.Component {
     body = () => {
         return (
             <div className="flowerTable">
+                <p>Welcome to the image quiz!</p>
                 <table>
                     <tbody>
                         <tr>
@@ -64,43 +65,9 @@ class Home extends React.Component {
                             <td>
                                 <div>
                                     <Link to={this.getPathWithCursor(3)}>
-                                        <img src={daisy} alt="daisy"/>
-                                    </Link>
-                                    <p>daisy</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    <Link to={this.getPathWithCursor(4)}>
                                         <img src={rose} alt="rose"/>
                                     </Link>
                                     <p>rose</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <Link to={this.getPathWithCursor(5)}>
-                                        <img src={sunflower} alt="sunflower"/>
-                                    </Link>
-                                    <p>sunflower</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <Link to={this.getPathWithCursor(6)}>
-                                        <img src={tulip} alt="tulip"/>
-                                    </Link>
-                                    <p>tulip</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <Link to={this.getPathWithCursor(7)}>
-                                        <img src={waterlily} alt="waterlily"/>
-                                    </Link>
-                                    <p>waterlily</p>
                                 </div>
                             </td>
                         </tr>
@@ -142,6 +109,7 @@ class Home extends React.Component {
                     :<Link className='MyButton' to='/login'>Login</Link>}
                 
                 </div>
+                
                 {this.body()}        
             </div>
         );

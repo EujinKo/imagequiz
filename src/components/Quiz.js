@@ -103,32 +103,39 @@ class Quiz extends React.Component {
                 <Redirect to= {from} />
             );
         }
-        if(this.state.cursor_quiz == 3){
+        if(this.state.entries.length != 0 ){
+            var length = this.state.entries[this.state.cursor].quizzes.length;
+
+            if(this.state.cursor_quiz == length){
+                return(
+                    <div className="flowerTable">
+                        <br/><br/>
+                        <label>Total Score: (current score:{this.state.score}/{length})</label>
+                        <br/>
+                        <label>Would you like to play again?</label>
+                        <br/>
+                        <button className="MyButton" onClick={()=>{this.componentDidMount()}}>Yes</button>
+                        <button className="MyButton" onClick={()=>{this.setTrigger()}}>No</button>
+                        <br/><br/>
+                    </div>
+                );
+            }
+    
             return(
-                <div className="flowerTable">
-                    <br/><br/>
-                    <label>Total Score: (current score:{this.state.score}/{3})</label>
-                    <br/>
-                    <label>Would you like to play again?</label>
-                    <br/>
-                    <button className="MyButton" onClick={()=>{this.componentDidMount()}}>Yes</button>
-                    <button className="MyButton" onClick={()=>{this.setTrigger()}}>No</button>
-                    <br/><br/>
+                <div>
+                    <div className="loginButton">
+                        {this.state.username}
+                        <br/>
+                        (current score:{this.state.score}/{length})
+                    </div>
+                    <div>
+                        {this.bodyQuiz()}
+                    </div>
                 </div>
             );
         }
-
         return(
-            <div>
-                <div className="loginButton">
-                    {this.state.username}
-                    <br/>
-                    (current score:{this.state.score}/{3})
-                </div>
-                <div>
-                    {this.bodyQuiz()}
-                </div>
-            </div>
+            <div>Page is loading</div>
         );
     }
 }

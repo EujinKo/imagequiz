@@ -16,6 +16,21 @@ let entries = [
                     imgSrc: './quiz_images/Cat.jpg',
                     answer: 'Cat',
                     choices: ['Dog','Cat','Zebra','Otter']
+                },
+                {
+                    imgSrc: './quiz_images/Tiger.jpg',
+                    answer: 'Tiger',
+                    choices: ['Otter','Squirrel','Rabbit','Tiger']
+                },
+                {
+                    imgSrc: './quiz_images/Wallet.jpg',
+                    answer: 'Wallet',
+                    choices: ['Wallet','Squirrel','Rabbit','Coffee']
+                },
+                {
+                    imgSrc: './quiz_images/Zebra.jpg',
+                    answer: 'Zebra',
+                    choices: ['Otter','Squirrel','Zebra','Coffee']
                 }
             ]
         },
@@ -36,6 +51,20 @@ let entries = [
                     imgSrc: './quiz_images/Dog.jpg',
                     answer: 'Dog',
                     choices: ['Dog','Cat','Zebra','Coffee']
+                },                {
+                    imgSrc: './quiz_images/Raccoon.jpg',
+                    answer: 'Raccoon',
+                    choices: ['Raccoon','MusicBox','Rabbit','Coffee']
+                },
+                {
+                    imgSrc: './quiz_images/Slipper.jpg',
+                    answer: 'Slipper',
+                    choices: ['Otter','MusicBox','Rabbit','Slipper']
+                },
+                {
+                    imgSrc: './quiz_images/Squirrel.jpg',
+                    answer: 'Squirrel',
+                    choices: ['Otter','Squirrel','Rabbit','Coffee']
                 }
             ]
         },
@@ -56,7 +85,7 @@ let entries = [
                     imgSrc: './quiz_images/Light.jpg',
                     answer: 'Light',
                     choices: ['Light','Cat','Zebra','Coffee']
-                }
+                },
             ]
         },
         {
@@ -76,13 +105,7 @@ let entries = [
                     imgSrc: './quiz_images/Mouse.jpg',
                     answer: 'Mouse',
                     choices: ['Mouse','Cat','Zebra','Coffee']
-                }
-            ]
-        },
-        {
-            number: 4,
-            quizzes: [
-                {
+                },                {
                     imgSrc: './quiz_images/MusicBox.jpg',
                     answer: 'MusicBox',
                     choices: ['Mouse','Cat','MusicBox','Coffee']
@@ -99,66 +122,7 @@ let entries = [
                 }
             ]
         },
-        {
-            number: 5,
-            quizzes: [
-                {
-                    imgSrc: './quiz_images/Peacock.jpg',
-                    answer: 'Peacock',
-                    choices: ['Otter','MusicBox','Peacock','Coffee']
-                },
-                {
-                    imgSrc: './quiz_images/Prairiedog.jpg',
-                    answer: 'Prairiedog',
-                    choices: ['Otter','MusicBox','Zebra','Prairiedog']
-                },
-                {
-                    imgSrc: './quiz_images/Rabbit.jpg',
-                    answer: 'Rabbit',
-                    choices: ['Otter','MusicBox','Rabbit','Coffee']
-                }
-            ]
-        },
-        {
-            number: 6,
-            quizzes: [
-                {
-                    imgSrc: './quiz_images/Raccoon.jpg',
-                    answer: 'Raccoon',
-                    choices: ['Raccoon','MusicBox','Rabbit','Coffee']
-                },
-                {
-                    imgSrc: './quiz_images/Slipper.jpg',
-                    answer: 'Slipper',
-                    choices: ['Otter','MusicBox','Rabbit','Slipper']
-                },
-                {
-                    imgSrc: './quiz_images/Squirrel.jpg',
-                    answer: 'Squirrel',
-                    choices: ['Otter','Squirrel','Rabbit','Coffee']
-                }
-            ]
-        },
-        {
-            number: 7,
-            quizzes: [
-                {
-                    imgSrc: './quiz_images/Tiger.jpg',
-                    answer: 'Tiger',
-                    choices: ['Otter','Squirrel','Rabbit','Tiger']
-                },
-                {
-                    imgSrc: './quiz_images/Wallet.jpg',
-                    answer: 'Wallet',
-                    choices: ['Wallet','Squirrel','Rabbit','Coffee']
-                },
-                {
-                    imgSrc: './quiz_images/Zebra.jpg',
-                    answer: 'Zebra',
-                    choices: ['Otter','Squirrel','Zebra','Coffee']
-                }
-            ]
-        }
+
 ]
 
 export default entries;
