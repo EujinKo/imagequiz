@@ -18,13 +18,19 @@ class Quiz extends React.Component {
     }
     
     componentDidMount(){
-        const entries = server.fetchEntries();
+        server.fetchEntries()
+        .then(x => {
+            this.setState({entries: x});
+            console.log(this.state);
+        })
+        .catch(e => {
+            console.log(e);
+        });
         //window: created by browser
         //Binds the function to the key
         // window.addEventListener("keydown",this.handleKeyDown);
         const {username,cursor} = this.props.location.state;
         this.setState({
-            entries: entries,
             username: username,
             cursor: cursor,
             cursor_quiz: 0,
@@ -103,37 +109,37 @@ class Quiz extends React.Component {
                 <Redirect to= {from} />
             );
         }
-        if(this.state.entries.length != 0 ){
-            var length = this.state.entries[this.state.cursor].quizzes.length;
+        // if(this.state.entries.length != 0 ){
+        //     var length = this.state.entries[this.state.cursor].quizzes.length;
 
-            if(this.state.cursor_quiz == length){
-                return(
-                    <div className="flowerTable">
-                        <br/><br/>
-                        <label>Total Score: (current score:{this.state.score}/{length})</label>
-                        <br/>
-                        <label>Would you like to play again?</label>
-                        <br/>
-                        <button className="MyButton" onClick={()=>{this.componentDidMount()}}>Yes</button>
-                        <button className="MyButton" onClick={()=>{this.setTrigger()}}>No</button>
-                        <br/><br/>
-                    </div>
-                );
-            }
+        //     if(this.state.cursor_quiz == length){
+        //         return(
+        //             <div className="flowerTable">
+        //                 <br/><br/>
+        //                 <label>Total Score: (current score:{this.state.score}/{length})</label>
+        //                 <br/>
+        //                 <label>Would you like to play again?</label>
+        //                 <br/>
+        //                 <button className="MyButton" onClick={()=>{this.componentDidMount()}}>Yes</button>
+        //                 <button className="MyButton" onClick={()=>{this.setTrigger()}}>No</button>
+        //                 <br/><br/>
+        //             </div>
+        //         );
+        //     }
     
-            return(
-                <div>
-                    <div className="loginButton">
-                        {this.state.username}
-                        <br/>
-                        (current score:{this.state.score}/{length})
-                    </div>
-                    <div>
-                        {this.bodyQuiz()}
-                    </div>
-                </div>
-            );
-        }
+        //     return(
+        //         <div>
+        //             <div className="loginButton">
+        //                 {this.state.username}
+        //                 <br/>
+        //                 (current score:{this.state.score}/{length})
+        //             </div>
+        //             <div>
+        //                 {this.bodyQuiz()}
+        //             </div>
+        //         </div>
+        //     );
+        // }
         return(
             <div>Page is loading</div>
         );
