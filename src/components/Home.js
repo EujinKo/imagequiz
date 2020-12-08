@@ -55,26 +55,6 @@ class Home extends React.Component {
             console.log(e);
         })
     }
-    componentDidUpdate(){
-
-        server.findBestScore().then( x => {
-            let score0 = x[0].score;
-            let score1 = x[1].score;
-            let score2 = x[2].score;
-            let score3 = x[3].score;
-
-            this.setState({
-                quiz0bestscore: score0,
-                quiz1bestscore: score1,
-                quiz2bestscore: score2,
-                quiz3bestscore: score3
-            })
-            console.log(this.state);
-
-        }).catch(e => {
-            console.log(e);
-        })
-    }
 
     body = () => {
         return (
