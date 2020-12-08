@@ -89,7 +89,7 @@ class Home extends React.Component {
                                         <img src={cherryblossom} alt="cherryblossom"/>
                                     </Link>
                                     <p>cherryblossom</p>
-                                    <p className="MyButton">Best Score: {this.state.quiz0bestscore}</p>
+                                    <p className="MyButton">Score: {this.state.quiz0bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -98,7 +98,7 @@ class Home extends React.Component {
                                         <img src={daffodil} alt="daffodil"/>
                                     </Link>
                                     <p>daffodil</p>
-                                    <p className="MyButton">Best Score: {this.state.quiz1bestscore}</p>
+                                    <p className="MyButton">Score: {this.state.quiz1bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -107,7 +107,7 @@ class Home extends React.Component {
                                         <img src={lily} alt="lily"/>
                                     </Link>
                                     <p>lily</p>
-                                    <p className="MyButton">Best Score: {this.state.quiz2bestscore}</p>
+                                    <p className="MyButton">Score: {this.state.quiz2bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -116,7 +116,7 @@ class Home extends React.Component {
                                         <img src={rose} alt="rose"/>
                                     </Link>
                                     <p>rose</p>
-                                    <p className="MyButton">Best Score: {this.state.quiz3bestscore}</p>
+                                    <p className="MyButton">Score: {this.state.quiz3bestscore}</p>
                                 </div>
                             </td>
                         </tr>
