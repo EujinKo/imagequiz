@@ -99,7 +99,7 @@ class Quiz extends React.Component {
         this.setState({
             trigger: true
         });
-        server.storeResults(this.state.username,this.state.cursor_quiz,this.state.score);
+        server.storeResults(this.state.cursor,this.state.score);
     }
 
     render(){

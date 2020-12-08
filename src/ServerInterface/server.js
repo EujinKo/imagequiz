@@ -15,9 +15,9 @@ let server = {
         );
     },
 
-    storeResults: (username, quizid, score) => {
-        let data = {username: username, quizid: quizid, score:score};
-        fetch("http://localhost:3002/score", {
+    storeResults: (quizid, score) => {
+        let data = {quizid: quizid, score:score};
+        fetch(api+'/score', {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -26,6 +26,18 @@ let server = {
         }).then( x => x.json()).then( y => console.log(y)).catch( e=> console.log(e));
 
 
+    },
+    findBestScore: () => {
+        return (
+            fetch(api+"/scores").then( x => {
+                return x.json();
+            }).then( y => {
+                console.log(y);
+                return y;
+            }).catch(e => {
+                console.log("ERROR: From server\n"+e);
+            })
+        )
     }
 
 };

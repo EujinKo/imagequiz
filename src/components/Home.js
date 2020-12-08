@@ -1,4 +1,5 @@
 import React from 'react';
+import server from '../ServerInterface/server';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import {Redirect} from 'react-router-dom';
@@ -19,7 +20,11 @@ class Home extends React.Component {
     constructor(props){ //Constructor always receive props
         super(props);   //Superconstructor
         this.state = {
-            username: ''
+            username: '',
+            quiz0bestscore: 0,
+            quiz1bestscore: 0,
+            quiz2bestscore: 0,
+            quiz3bestscore: 0,
         };
     }
 
@@ -30,7 +35,47 @@ class Home extends React.Component {
         }};
         return from;
     }
-    
+    componentDidMount(){
+
+        server.findBestScore().then( x => {
+            let score0 = x[0].score;
+            let score1 = x[1].score;
+            let score2 = x[2].score;
+            let score3 = x[3].score;
+
+            this.setState({
+                quiz0bestscore: score0,
+                quiz1bestscore: score1,
+                quiz2bestscore: score2,
+                quiz3bestscore: score3
+            })
+            console.log(this.state);
+
+        }).catch(e => {
+            console.log(e);
+        })
+    }
+    componentDidUpdate(){
+
+        server.findBestScore().then( x => {
+            let score0 = x[0].score;
+            let score1 = x[1].score;
+            let score2 = x[2].score;
+            let score3 = x[3].score;
+
+            this.setState({
+                quiz0bestscore: score0,
+                quiz1bestscore: score1,
+                quiz2bestscore: score2,
+                quiz3bestscore: score3
+            })
+            console.log(this.state);
+
+        }).catch(e => {
+            console.log(e);
+        })
+    }
+
     body = () => {
         return (
             <div className="flowerTable">
@@ -44,6 +89,7 @@ class Home extends React.Component {
                                         <img src={cherryblossom} alt="cherryblossom"/>
                                     </Link>
                                     <p>cherryblossom</p>
+                                    <p className="MyButton">Best Score: {this.state.quiz0bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -52,6 +98,7 @@ class Home extends React.Component {
                                         <img src={daffodil} alt="daffodil"/>
                                     </Link>
                                     <p>daffodil</p>
+                                    <p className="MyButton">Best Score: {this.state.quiz1bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -60,6 +107,7 @@ class Home extends React.Component {
                                         <img src={lily} alt="lily"/>
                                     </Link>
                                     <p>lily</p>
+                                    <p className="MyButton">Best Score: {this.state.quiz2bestscore}</p>
                                 </div>
                             </td>
                             <td>
@@ -68,6 +116,7 @@ class Home extends React.Component {
                                         <img src={rose} alt="rose"/>
                                     </Link>
                                     <p>rose</p>
+                                    <p className="MyButton">Best Score: {this.state.quiz3bestscore}</p>
                                 </div>
                             </td>
                         </tr>
